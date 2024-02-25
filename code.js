@@ -1,3 +1,21 @@
+const inputEl = document.querySelector('input');
+const bodyEl = document.querySelector('body');
+
+inputEl.checked = false;
+updateBody();
+
+function updateBody(){
+if (inputEl.checked){
+    bodyEl.style.background = "rgb(28, 7, 28)";
+    bodyEl.style.color = "white";
+}else{
+    bodyEl.style.background = "white";
+}
+}
+inputEl.addEventListener("input", () =>{
+updateBody();
+})
+
 const typeEl = document.querySelector('.text');
 const careers = ["web developer", "Freelancer"];
 
